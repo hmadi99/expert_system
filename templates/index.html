@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{%load static %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+    </head>
+    <body>
+        <div class="titel">
+        <h1>This is a knowledge based bot to diagnose diseases</h1>
+        <h1>Do you feel any of the following symptoms?</h1>
+        <h1>Reply high or low or no</h1>
+        </div>
+        <form method="GET" class="form">
+            <div>
+                <label for="headache">headache</label>
+                <input id="headache" name="headache" type="text">
+            </div>
+            <div>
+                <label for="back_pain">back_pain</label>
+                <input id="back_pain" name="back_pain" type="text">
+            </div>
+            <div>
+                <label for="chest_pain">chest_pain</label>
+                <input id="chest_pain" name="chest_pain" type="text">
+            </div>
+            <div>
+                <label for="cough">cough</label>
+                <input id="cough" name="cough" type="text">
+            </div>
+            <div>
+                <label for="fainting">fainting</label>
+                <input id="fainting" name="fainting" type="text">
+            </div>
+            <div>
+                <label for="fatigue">fatigue</label>
+                <input id="fatigue" name="fatigue" type="text">
+            </div>
+            <div>
+                <label for="sunken_eyes">sunken_eyes</label>
+                <input id="sunken_eyes" name="sunken_eyes" type="text">
+            </div>
+            <div>
+                <label for="low_body_temp">low_body_temp</label>
+                <input id="low_body_temp" name="low_body_temp" type="text">
+            </div>
+            <div>
+                <label for="restlessness">restlessness</label>
+                <input id="restlessness" name="restlessness" type="text">
+            </div>
+            <div>
+                <label for="sore_throat">sore_throat</label>
+                <input id="sore_throat" name="sore_throat" type="text">
+            </div>
+            <div>
+                <label for="fever">fever</label>
+                <input id="fever" name="fever" type="text">
+            </div>
+            <div>
+                <label for="nausea">nausea</label>
+                <input id="nausea" name="nausea" type="text">
+            </div>
+            <div>
+                <label for="blurred_vision">blurred_vision</label>
+                <input id="blurred_vision" name="blurred_vision" type="text">
+            </div>
+            <button type="submit" name="btn">search</button>
+        </form>
+        <div class="answer">
+        {%for msg in messages%}
+        <h3 class="msg">{{msg}}</h3><br>
+        {%endfor%}
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
